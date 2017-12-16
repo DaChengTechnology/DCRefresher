@@ -50,7 +50,8 @@ public class DCRefresherFooter: DCRefresherComponent {
     override func placeSubViews() {
         super.placeSubViews()
         var rect = frame
-        rect.origin.y = -frame.height + (scrollView?.contentOffset.y)!
+        rect.origin.y = (scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!
+        self.frame = rect
     }
     
     ///确认安全边界(make sure safe edges)

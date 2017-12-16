@@ -66,7 +66,7 @@ public class DCRefresherComponent :UIView{
     ///是否滑到部分就开始刷新 位置通过postionRefresh设置(If you slide to part, you start to refresh your position through the postionRefresh setting)
     var isscrolledMidRefresh:Bool = false
     
-    ///滑动到指定位置刷新 范围0-1 如果为footer 值为0.2 scrollview滑动到(contentSize.height+contentOffset.y-frame.height)/contentSize.height<=0.2的时候触发刷新操作(Slide to the specified location to refresh the range 0-1 if the footer value is 0.2 scrollview sliding to (contentSize. Height +contentOffset. Y -frame.height)/contentSize. Height <= 0.2, trigger the refresh operation)
+    ///滑动到指定位置刷新 范围0-1 如果为footer 值为0.2 scrollview滑动到(contentSize.height+contentOffset.y)/contentSize.height<=0.2的时候触发刷新操作(Slide to the specified location to refresh the range 0-1 if the footer value is 0.2 scrollview sliding to (contentSize. Height +contentOffset. Y)/contentSize. Height <= 0.2, trigger the refresh operation)
     var postionRefresh:CGFloat = 0
     
     
@@ -83,7 +83,8 @@ public class DCRefresherComponent :UIView{
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        prepare()
+        pullingPercent = 0
+        isAutomaticallyChangeAlpha = false
     }
     
     func prepare() {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532B88681FE3BDB6005DD77D /* DCNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */; };
+		532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88691FE3BE33005DD77D /* DCNormalFooter.swift */; };
+		532B886C1FE3C6CB005DD77D /* DCAnimateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */; };
+		532B886E1FE3EBF8005DD77D /* DCAnimateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */; };
+		532FF84F1FE50A0700491661 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532FF84E1FE50A0700491661 /* image.xcassets */; };
 		534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */; };
 		534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F71FE2B3500002453F /* DCRefresherComponent.swift */; };
 		534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FA1FE2D1870002453F /* DCRefresherHeader.swift */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalHeader.swift; sourceTree = "<group>"; };
+		532B88691FE3BE33005DD77D /* DCNormalFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalFooter.swift; sourceTree = "<group>"; };
+		532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAnimateHeader.swift; sourceTree = "<group>"; };
+		532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAnimateFooter.swift; sourceTree = "<group>"; };
+		532FF84E1FE50A0700491661 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 		534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherStaticValue.swift; sourceTree = "<group>"; };
 		534599F71FE2B3500002453F /* DCRefresherComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherComponent.swift; sourceTree = "<group>"; };
 		534599FA1FE2D1870002453F /* DCRefresherHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherHeader.swift; sourceTree = "<group>"; };
@@ -70,6 +80,10 @@
 				534599FA1FE2D1870002453F /* DCRefresherHeader.swift */,
 				534599FC1FE2D1BB0002453F /* DCRefresherFooter.swift */,
 				534599FE1FE2F7840002453F /* DCKVOMenager.swift */,
+				532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */,
+				532B88691FE3BE33005DD77D /* DCNormalFooter.swift */,
+				532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */,
+				532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 				53CAFC9D1FE18F140029F4A8 /* DCRefresher.swift */,
 				534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */,
 				534599F71FE2B3500002453F /* DCRefresherComponent.swift */,
+				532FF84E1FE50A0700491661 /* image.xcassets */,
 			);
 			path = DCRefresher;
 			sourceTree = "<group>";
@@ -209,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532FF84F1FE50A0700491661 /* image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,13 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532B88681FE3BDB6005DD77D /* DCNormalHeader.swift in Sources */,
 				53CAFC9A1FE1898B0029F4A8 /* UIScrollView+DCReflesher.swift in Sources */,
 				534599FF1FE2F7840002453F /* DCKVOMenager.swift in Sources */,
 				534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */,
 				53CAFC9E1FE18F140029F4A8 /* DCRefresher.swift in Sources */,
+				532B886C1FE3C6CB005DD77D /* DCAnimateHeader.swift in Sources */,
+				532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */,
 				534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */,
 				534599FD1FE2D1BB0002453F /* DCRefresherFooter.swift in Sources */,
 				534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */,
+				532B886E1FE3EBF8005DD77D /* DCAnimateFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

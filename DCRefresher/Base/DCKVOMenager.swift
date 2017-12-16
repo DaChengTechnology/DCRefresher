@@ -11,7 +11,7 @@ import Foundation
 
 public class DCKVOMenager: NSObject {
     
-    ///需要监听的控件(need listenv control)
+    ///需要监听的控件(need listen control)
     weak var scrollView:UIScrollView?
     ///滑动手势(UIPanGestureRecognizer)
     weak var pan:UIPanGestureRecognizer?
@@ -78,10 +78,11 @@ public class DCKVOMenager: NSObject {
                 }
             }
         }
+        //滑动状态操作(dragging state)
         if (scrollView?.isDragging)! {
             if !(scrollView?.dc_header?.isscrolledMidRefresh)! {
                 if scrollView?.dc_header?.state == .normal {
-                    if (scrollView?.contentOffset.y)! > (scrollView?.dc_header?.frame.height)! {
+                    if (scrollView?.contentOffset.y)! >= (scrollView?.dc_header?.frame.height)! {
                         scrollView?.dc_header?.setState(state: .willRefresh)
                     }
                 }
@@ -90,10 +91,21 @@ public class DCKVOMenager: NSObject {
                         scrollView?.dc_header?.setState(state: .normal)
                     }
                 }
+            }else{
+                if scrollView?.dc_header?.state == .normal {
+                    if (0-(scrollView?.contentOffset.y)!)/(scrollView?.contentSize.height)! <= (scrollView?.dc_header?.postionRefresh)! {
+                        scrollView?.dc_header?.setState(state: .willRefresh)
+                    }
+                }
+                if scrollView?.dc_header?.state == .willRefresh {
+                    if (0-(scrollView?.contentOffset.y)!)/(scrollView?.contentSize.height)! > (scrollView?.dc_header?.postionRefresh)! {
+                        scrollView?.dc_header?.setState(state: .normal)
+                    }
+                }
             }
             if !(scrollView?.dc_footer?.isscrolledMidRefresh)! {
                 if scrollView?.dc_footer?.state == .normal {
-                    if (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) > (scrollView?.dc_footer?.frame.height)! {
+                    if (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) >= (scrollView?.dc_footer?.frame.height)! {
                         scrollView?.dc_footer?.setState(state: .willRefresh)
                     }
                 }
@@ -102,13 +114,37 @@ public class DCKVOMenager: NSObject {
                         scrollView?.dc_footer?.setState(state: .normal)
                     }
                 }
+            }else{
+                if scrollView?.dc_footer?.state == .normal {
+                    if ((scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!) / (scrollView?.contentSize.height)! <= (scrollView?.dc_footer?.postionRefresh)! {
+                        scrollView?.dc_footer?.setState(state: .willRefresh)
+                    }
+                }
+                if scrollView?.dc_footer?.state == .willRefresh {
+                    if ((scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!) / (scrollView?.contentSize.height)! > (scrollView?.dc_footer?.postionRefresh)! {
+                        scrollView?.dc_footer?.setState(state: .normal)
+                    }
+                }
             }
         }
     }
     ///大小改变(size changed)
-    func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?){}
+    func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?){
+        var rect = scrollView?.dc_footer?.frame
+        rect?.origin.y = (scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!
+        scrollView?.dc_footer?.frame = rect!
+    }
     ///触摸状态改变(touch state changed)
-    func scrollViewPanStateDidChange(change: [NSKeyValueChangeKey : Any]?){}
+    func scrollViewPanStateDidChange(change: [NSKeyValueChangeKey : Any]?){
+        if pan?.state == .ended {
+            if scrollView?.dc_header?.state == .willRefresh {
+                scrollView?.dc_header?.setState(state: .refreshing)
+            }
+            if scrollView?.dc_footer?.state == .willRefresh {
+                scrollView?.dc_footer?.setState(state: .refreshing)
+            }
+        }
+    }
     
     //控件刷新中
     func headerRefreshing() -> Bool {
