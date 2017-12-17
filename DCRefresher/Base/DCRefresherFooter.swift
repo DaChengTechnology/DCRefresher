@@ -50,17 +50,17 @@ public class DCRefresherFooter: DCRefresherComponent {
     override func placeSubViews() {
         super.placeSubViews()
         var rect = frame
-        rect.origin.y = (scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!
+        rect.origin.y = (scrollView?.contentSize.height)! - (scrollView?.frame.height)!
         self.frame = rect
     }
     
     ///确认安全边界(make sure safe edges)
     public override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        scrollViewOriginalInset = scrollView?.contentInset
+        scrollViewOriginalInset = scrollView?.scrollIndicatorInsets
         if (scrollViewOriginalInset?.bottom)! <= self.frame.height {
             scrollViewOriginalInset?.bottom = frame.height+40
-            scrollView?.contentInset = scrollViewOriginalInset!
+            scrollView?.scrollIndicatorInsets = scrollViewOriginalInset!
         }
     }
 

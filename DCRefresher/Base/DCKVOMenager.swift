@@ -54,75 +54,98 @@ public class DCKVOMenager: NSObject {
     ///位置改变(postion changed)
     func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?){
         var b:Bool = false
-        if scrollView?.dc_header?.state == .refreshing {
-            b = headerRefreshing()
+        if scrollView?.dc_header != nil {
+            if scrollView?.dc_header?.state == .refreshing {
+                b = headerRefreshing()
+            }
         }
-        if scrollView?.dc_footer?.state == .refreshing {
-            b = b && footerRefreshing()
+        if scrollView?.dc_footer != nil {
+            if scrollView?.dc_footer?.state == .refreshing {
+                b = b && footerRefreshing()
+            }
         }
         if b {
             return
         }
         //自动透明度(auto alpha)
-        if (scrollView?.dc_header?.state == .normal) || (scrollView?.dc_header?.state == .refreshed) || (scrollView?.dc_header?.state == .noMore) {
-            if (scrollView?.dc_header?.isAutomaticallyChangeAlpha)! {
-                if (scrollView?.contentOffset.y)! > CGFloat(0) {
-                    scrollView?.dc_header?.pullingPercent = (scrollView?.contentOffset.y)! / (scrollView?.dc_header?.frame.height)!
+        if scrollView?.dc_header != nil {
+            if (scrollView?.dc_header?.state == .normal) || (scrollView?.dc_header?.state == .refreshed) || (scrollView?.dc_header?.state == .noMore) {
+                if (scrollView?.dc_header?.isAutomaticallyChangeAlpha)! {
+                    if (scrollView?.contentOffset.y)! < CGFloat(0) {
+                        scrollView?.dc_header?.pullingPercent = (0 - (scrollView?.contentOffset.y)!) / (scrollView?.dc_header?.frame.height)!
+                        UIView.animate(withDuration: 0.01, delay: 0, options: .curveLinear, animations: {
+                            self.scrollView?.dc_header?.applyAlpha()
+                        }, completion: { (_) in
+                            
+                        })
+                    }
                 }
             }
         }
-        if (scrollView?.dc_header?.state == .normal) || (scrollView?.dc_header?.state == .refreshed) || (scrollView?.dc_header?.state == .noMore) {
-            if (scrollView?.dc_footer?.isAutomaticallyChangeAlpha)! {
-                if (scrollView?.contentOffset.y)! < ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!) {
-                    scrollView?.dc_footer?.pullingPercent = (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) / (scrollView?.dc_footer?.frame.height)!
+        if scrollView?.dc_footer != nil {
+            if (scrollView?.dc_footer?.state == .normal) || (scrollView?.dc_footer?.state == .refreshed) || (scrollView?.dc_footer?.state == .noMore) {
+                if (scrollView?.dc_footer?.isAutomaticallyChangeAlpha)! {
+                    if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! {
+                        scrollView?.dc_footer?.pullingPercent = (scrollView?.contentOffset.y)! - ((scrollView?.contentSize.height)! - (scrollView?.frame.height)!)/(scrollView?.dc_footer?.frame.height)!
+                        UIView.animate(withDuration: 0.01, delay: 0, options: .curveLinear, animations: {
+                            self.scrollView?.dc_footer?.applyAlpha()
+                        }, completion: { (_) in
+                            
+                        })
+                    }
                 }
             }
         }
+        print(scrollView?.contentOffset.y)
         //滑动状态操作(dragging state)
         if (scrollView?.isDragging)! {
-            if !(scrollView?.dc_header?.isscrolledMidRefresh)! {
-                if scrollView?.dc_header?.state == .normal {
-                    if (scrollView?.contentOffset.y)! >= (scrollView?.dc_header?.frame.height)! {
-                        scrollView?.dc_header?.setState(state: .willRefresh)
+            if scrollView?.dc_header != nil {
+                if !(scrollView?.dc_header?.isscrolledMidRefresh)! {
+                    if scrollView?.dc_header?.state == .normal {
+                        if (scrollView?.contentOffset.y)! <= 0-(scrollView?.dc_header?.frame.height)! {
+                            scrollView?.dc_header?.setState(state: .willRefresh)
+                        }
                     }
-                }
-                if scrollView?.dc_header?.state == .willRefresh {
-                    if (scrollView?.contentOffset.y)! < (scrollView?.dc_header?.frame.height)! {
-                        scrollView?.dc_header?.setState(state: .normal)
+                    if scrollView?.dc_header?.state == .willRefresh {
+                        if (scrollView?.contentOffset.y)! > 0-(scrollView?.dc_header?.frame.height)! {
+                            scrollView?.dc_header?.setState(state: .normal)
+                        }
                     }
-                }
-            }else{
-                if scrollView?.dc_header?.state == .normal {
-                    if (0-(scrollView?.contentOffset.y)!)/(scrollView?.contentSize.height)! <= (scrollView?.dc_header?.postionRefresh)! {
-                        scrollView?.dc_header?.setState(state: .willRefresh)
+                }else{
+                    if scrollView?.dc_header?.state == .normal {
+                        if (scrollView?.contentOffset.y)! <= (scrollView?.dc_header?.postionRefresh)! {
+                            scrollView?.dc_header?.setState(state: .willRefresh)
+                        }
                     }
-                }
-                if scrollView?.dc_header?.state == .willRefresh {
-                    if (0-(scrollView?.contentOffset.y)!)/(scrollView?.contentSize.height)! > (scrollView?.dc_header?.postionRefresh)! {
-                        scrollView?.dc_header?.setState(state: .normal)
+                    if scrollView?.dc_header?.state == .willRefresh {
+                        if (scrollView?.contentOffset.y)! > (scrollView?.dc_header?.postionRefresh)! {
+                            scrollView?.dc_header?.setState(state: .normal)
+                        }
                     }
                 }
             }
-            if !(scrollView?.dc_footer?.isscrolledMidRefresh)! {
-                if scrollView?.dc_footer?.state == .normal {
-                    if (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) >= (scrollView?.dc_footer?.frame.height)! {
-                        scrollView?.dc_footer?.setState(state: .willRefresh)
+            if scrollView?.dc_footer != nil {
+                if !(scrollView?.dc_footer?.isscrolledMidRefresh)! {
+                    if scrollView?.dc_footer?.state == .normal {
+                        if ((scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!)  {
+                            scrollView?.dc_footer?.setState(state: .willRefresh)
+                        }
                     }
-                }
-                if scrollView?.dc_footer?.state == .willRefresh {
-                    if (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) < (scrollView?.dc_footer?.frame.height)! {
-                        scrollView?.dc_footer?.setState(state: .normal)
+                    if scrollView?.dc_footer?.state == .willRefresh {
+                        if ((scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!) {
+                            scrollView?.dc_footer?.setState(state: .normal)
+                        }
                     }
-                }
-            }else{
-                if scrollView?.dc_footer?.state == .normal {
-                    if ((scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!) / (scrollView?.contentSize.height)! <= (scrollView?.dc_footer?.postionRefresh)! {
-                        scrollView?.dc_footer?.setState(state: .willRefresh)
+                }else{
+                    if scrollView?.dc_footer?.state == .normal {
+                        if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
+                            scrollView?.dc_footer?.setState(state: .willRefresh)
+                        }
                     }
-                }
-                if scrollView?.dc_footer?.state == .willRefresh {
-                    if ((scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!) / (scrollView?.contentSize.height)! > (scrollView?.dc_footer?.postionRefresh)! {
-                        scrollView?.dc_footer?.setState(state: .normal)
+                    if scrollView?.dc_footer?.state == .willRefresh {
+                        if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
+                            scrollView?.dc_footer?.setState(state: .normal)
+                        }
                     }
                 }
             }
@@ -130,29 +153,42 @@ public class DCKVOMenager: NSObject {
     }
     ///大小改变(size changed)
     func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?){
-        var rect = scrollView?.dc_footer?.frame
-        rect?.origin.y = (scrollView?.contentSize.height)! + (scrollView?.contentOffset.y)!
-        scrollView?.dc_footer?.frame = rect!
+        if scrollView?.dc_footer != nil {
+            var rect = scrollView?.dc_footer?.frame
+            rect?.origin.y = (scrollView?.contentSize.height)! - (scrollView?.frame.height)!
+            scrollView?.dc_footer?.frame = rect!
+        }
     }
     ///触摸状态改变(touch state changed)
     func scrollViewPanStateDidChange(change: [NSKeyValueChangeKey : Any]?){
         if pan?.state == .ended {
-            if scrollView?.dc_header?.state == .willRefresh {
-                scrollView?.dc_header?.setState(state: .refreshing)
+            if scrollView?.dc_header != nil {
+                if scrollView?.dc_header?.state == .willRefresh {
+                    scrollView?.dc_header?.setState(state: .refreshing)
+                }
             }
-            if scrollView?.dc_footer?.state == .willRefresh {
-                scrollView?.dc_footer?.setState(state: .refreshing)
+            if scrollView?.dc_footer != nil {
+                if scrollView?.dc_footer?.state == .willRefresh {
+                    scrollView?.dc_footer?.setState(state: .refreshing)
+                }
             }
         }
     }
     
     //控件刷新中
     func headerRefreshing() -> Bool {
-        if (scrollView?.dc_header?.isscrolledMidRefresh)! {
-            if (scrollView?.dc_header?.isAutomaticallyChangeAlpha)! {
-                if (scrollView?.contentOffset.y)! > CGFloat(0) {
-                    scrollView?.dc_header?.pullingPercent = (scrollView?.contentOffset.y)! / (scrollView?.dc_header?.frame.height)!
-                    return false
+        if scrollView?.dc_header != nil {
+            if (scrollView?.dc_header?.isscrolledMidRefresh)! {
+                if (scrollView?.dc_header?.isAutomaticallyChangeAlpha)! {
+                    if (scrollView?.contentOffset.y)! > CGFloat(0) {
+                        scrollView?.dc_header?.pullingPercent = (scrollView?.contentOffset.y)! / (scrollView?.dc_header?.frame.height)!
+                        UIView.animate(withDuration: 0.01, delay: 0, options: .curveLinear, animations: {
+                            self.scrollView?.dc_header?.applyAlpha()
+                        }, completion: { (_) in
+                            
+                        })
+                        return false
+                    }
                 }
             }
         }
@@ -160,11 +196,18 @@ public class DCKVOMenager: NSObject {
     }
     
     func footerRefreshing() -> Bool {
-        if (scrollView?.dc_footer?.isscrolledMidRefresh)! {
-            if (scrollView?.dc_footer?.isAutomaticallyChangeAlpha)! {
-                if (scrollView?.contentOffset.y)! < ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!) {
-                    scrollView?.dc_footer?.pullingPercent = (CGFloat(0) - ((scrollView?.contentOffset.y)! - ((scrollView?.frame.height)! - (scrollView?.contentSize.height)!))) / (scrollView?.dc_footer?.frame.height)!
-                    return false
+        if scrollView?.dc_footer != nil {
+            if (scrollView?.dc_footer?.isscrolledMidRefresh)! {
+                if (scrollView?.dc_footer?.isAutomaticallyChangeAlpha)! {
+                    if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! {
+                        scrollView?.dc_footer?.pullingPercent = (scrollView?.contentOffset.y)! - ((scrollView?.contentSize.height)! - (scrollView?.frame.height)!)/(scrollView?.dc_footer?.frame.height)!
+                        UIView.animate(withDuration: 0.01, delay: 0, options: .curveLinear, animations: {
+                            self.scrollView?.dc_footer?.applyAlpha()
+                        }, completion: { (_) in
+                            
+                        })
+                        return false
+                    }
                 }
             }
         }

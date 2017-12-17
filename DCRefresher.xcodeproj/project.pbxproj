@@ -9,14 +9,23 @@
 /* Begin PBXBuildFile section */
 		532B88681FE3BDB6005DD77D /* DCNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */; };
 		532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88691FE3BE33005DD77D /* DCNormalFooter.swift */; };
-		532B886C1FE3C6CB005DD77D /* DCAnimateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */; };
-		532B886E1FE3EBF8005DD77D /* DCAnimateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */; };
-		532FF84F1FE50A0700491661 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532FF84E1FE50A0700491661 /* image.xcassets */; };
+		532FF8511FE50F4400491661 /* DCDefualtHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FF8501FE50F4400491661 /* DCDefualtHeader.swift */; };
 		534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */; };
 		534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F71FE2B3500002453F /* DCRefresherComponent.swift */; };
 		534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FA1FE2D1870002453F /* DCRefresherHeader.swift */; };
 		534599FD1FE2D1BB0002453F /* DCRefresherFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FC1FE2D1BB0002453F /* DCRefresherFooter.swift */; };
 		534599FF1FE2F7840002453F /* DCKVOMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FE1FE2F7840002453F /* DCKVOMenager.swift */; };
+		5397E0601FE5650B00A9AE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397E05F1FE5650B00A9AE34 /* AppDelegate.swift */; };
+		5397E0621FE5650B00A9AE34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397E0611FE5650B00A9AE34 /* ViewController.swift */; };
+		5397E0651FE5650B00A9AE34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5397E0631FE5650B00A9AE34 /* Main.storyboard */; };
+		5397E0671FE5650B00A9AE34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5397E0661FE5650B00A9AE34 /* Assets.xcassets */; };
+		5397E06A1FE5650B00A9AE34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5397E0681FE5650B00A9AE34 /* LaunchScreen.storyboard */; };
+		5397E0751FE5650B00A9AE34 /* DCRefresherTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397E0741FE5650B00A9AE34 /* DCRefresherTestTests.swift */; };
+		5397E0801FE5650B00A9AE34 /* DCRefresherTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397E07F1FE5650B00A9AE34 /* DCRefresherTestUITests.swift */; };
+		5397E08C1FE5656D00A9AE34 /* DCRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CAFC7F1FE183100029F4A8 /* DCRefresher.framework */; };
+		5397E0901FE5883300A9AE34 /* DCTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397E08E1FE5883300A9AE34 /* DCTestTableViewCell.swift */; };
+		5397E0911FE5883300A9AE34 /* DCTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5397E08F1FE5883300A9AE34 /* DCTestTableViewCell.xib */; };
+		5397E0971FE5ADA300A9AE34 /* DCRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5397E0961FE5ADA300A9AE34 /* DCRefresh.bundle */; };
 		53CAFC891FE183100029F4A8 /* DCRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CAFC7F1FE183100029F4A8 /* DCRefresher.framework */; };
 		53CAFC8E1FE183100029F4A8 /* DCRefresherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CAFC8D1FE183100029F4A8 /* DCRefresherTests.swift */; };
 		53CAFC901FE183100029F4A8 /* DCRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CAFC821FE183100029F4A8 /* DCRefresher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +34,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5397E0711FE5650B00A9AE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53CAFC761FE183100029F4A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5397E05C1FE5650B00A9AE34;
+			remoteInfo = DCRefresherTest;
+		};
+		5397E07C1FE5650B00A9AE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53CAFC761FE183100029F4A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5397E05C1FE5650B00A9AE34;
+			remoteInfo = DCRefresherTest;
+		};
 		53CAFC8A1FE183100029F4A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53CAFC761FE183100029F4A8 /* Project object */;
@@ -37,14 +60,28 @@
 /* Begin PBXFileReference section */
 		532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalHeader.swift; sourceTree = "<group>"; };
 		532B88691FE3BE33005DD77D /* DCNormalFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalFooter.swift; sourceTree = "<group>"; };
-		532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAnimateHeader.swift; sourceTree = "<group>"; };
-		532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAnimateFooter.swift; sourceTree = "<group>"; };
-		532FF84E1FE50A0700491661 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
+		532FF8501FE50F4400491661 /* DCDefualtHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDefualtHeader.swift; sourceTree = "<group>"; };
 		534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherStaticValue.swift; sourceTree = "<group>"; };
 		534599F71FE2B3500002453F /* DCRefresherComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherComponent.swift; sourceTree = "<group>"; };
 		534599FA1FE2D1870002453F /* DCRefresherHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherHeader.swift; sourceTree = "<group>"; };
 		534599FC1FE2D1BB0002453F /* DCRefresherFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherFooter.swift; sourceTree = "<group>"; };
 		534599FE1FE2F7840002453F /* DCKVOMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCKVOMenager.swift; sourceTree = "<group>"; };
+		5397E05D1FE5650B00A9AE34 /* DCRefresherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCRefresherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5397E05F1FE5650B00A9AE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5397E0611FE5650B00A9AE34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5397E0641FE5650B00A9AE34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5397E0661FE5650B00A9AE34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5397E0691FE5650B00A9AE34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5397E06B1FE5650B00A9AE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5397E0701FE5650B00A9AE34 /* DCRefresherTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCRefresherTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5397E0741FE5650B00A9AE34 /* DCRefresherTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherTestTests.swift; sourceTree = "<group>"; };
+		5397E0761FE5650B00A9AE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5397E07B1FE5650B00A9AE34 /* DCRefresherTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCRefresherTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5397E07F1FE5650B00A9AE34 /* DCRefresherTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherTestUITests.swift; sourceTree = "<group>"; };
+		5397E0811FE5650B00A9AE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5397E08E1FE5883300A9AE34 /* DCTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCTestTableViewCell.swift; sourceTree = "<group>"; };
+		5397E08F1FE5883300A9AE34 /* DCTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCTestTableViewCell.xib; sourceTree = "<group>"; };
+		5397E0961FE5ADA300A9AE34 /* DCRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DCRefresh.bundle; sourceTree = "<group>"; };
 		53CAFC7F1FE183100029F4A8 /* DCRefresher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCRefresher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CAFC821FE183100029F4A8 /* DCRefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCRefresher.h; sourceTree = "<group>"; };
 		53CAFC831FE183100029F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +93,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5397E05A1FE5650B00A9AE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5397E08C1FE5656D00A9AE34 /* DCRefresher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E06D1FE5650B00A9AE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E0781FE5650B00A9AE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53CAFC7B1FE183100029F4A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,10 +141,56 @@
 				534599FE1FE2F7840002453F /* DCKVOMenager.swift */,
 				532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */,
 				532B88691FE3BE33005DD77D /* DCNormalFooter.swift */,
-				532B886B1FE3C6CB005DD77D /* DCAnimateHeader.swift */,
-				532B886D1FE3EBF8005DD77D /* DCAnimateFooter.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5397E05E1FE5650B00A9AE34 /* DCRefresherTest */ = {
+			isa = PBXGroup;
+			children = (
+				5397E08D1FE587E800A9AE34 /* cell */,
+				5397E05F1FE5650B00A9AE34 /* AppDelegate.swift */,
+				5397E0611FE5650B00A9AE34 /* ViewController.swift */,
+				5397E0631FE5650B00A9AE34 /* Main.storyboard */,
+				5397E0661FE5650B00A9AE34 /* Assets.xcassets */,
+				5397E0681FE5650B00A9AE34 /* LaunchScreen.storyboard */,
+				5397E06B1FE5650B00A9AE34 /* Info.plist */,
+			);
+			path = DCRefresherTest;
+			sourceTree = "<group>";
+		};
+		5397E0731FE5650B00A9AE34 /* DCRefresherTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				5397E0741FE5650B00A9AE34 /* DCRefresherTestTests.swift */,
+				5397E0761FE5650B00A9AE34 /* Info.plist */,
+			);
+			path = DCRefresherTestTests;
+			sourceTree = "<group>";
+		};
+		5397E07E1FE5650B00A9AE34 /* DCRefresherTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5397E07F1FE5650B00A9AE34 /* DCRefresherTestUITests.swift */,
+				5397E0811FE5650B00A9AE34 /* Info.plist */,
+			);
+			path = DCRefresherTestUITests;
+			sourceTree = "<group>";
+		};
+		5397E08B1FE5656D00A9AE34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5397E08D1FE587E800A9AE34 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				5397E08E1FE5883300A9AE34 /* DCTestTableViewCell.swift */,
+				5397E08F1FE5883300A9AE34 /* DCTestTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		53CAFC751FE183100029F4A8 = {
@@ -93,7 +198,11 @@
 			children = (
 				53CAFC811FE183100029F4A8 /* DCRefresher */,
 				53CAFC8C1FE183100029F4A8 /* DCRefresherTests */,
+				5397E05E1FE5650B00A9AE34 /* DCRefresherTest */,
+				5397E0731FE5650B00A9AE34 /* DCRefresherTestTests */,
+				5397E07E1FE5650B00A9AE34 /* DCRefresherTestUITests */,
 				53CAFC801FE183100029F4A8 /* Products */,
+				5397E08B1FE5656D00A9AE34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +211,9 @@
 			children = (
 				53CAFC7F1FE183100029F4A8 /* DCRefresher.framework */,
 				53CAFC881FE183100029F4A8 /* DCRefresherTests.xctest */,
+				5397E05D1FE5650B00A9AE34 /* DCRefresherTest.app */,
+				5397E0701FE5650B00A9AE34 /* DCRefresherTestTests.xctest */,
+				5397E07B1FE5650B00A9AE34 /* DCRefresherTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +227,9 @@
 				53CAFC991FE1898B0029F4A8 /* UIScrollView+DCReflesher.swift */,
 				53CAFC9D1FE18F140029F4A8 /* DCRefresher.swift */,
 				534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */,
+				532FF8501FE50F4400491661 /* DCDefualtHeader.swift */,
 				534599F71FE2B3500002453F /* DCRefresherComponent.swift */,
-				532FF84E1FE50A0700491661 /* image.xcassets */,
+				5397E0961FE5ADA300A9AE34 /* DCRefresh.bundle */,
 			);
 			path = DCRefresher;
 			sourceTree = "<group>";
@@ -144,6 +257,59 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5397E05C1FE5650B00A9AE34 /* DCRefresherTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5397E0881FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTest" */;
+			buildPhases = (
+				5397E0591FE5650B00A9AE34 /* Sources */,
+				5397E05A1FE5650B00A9AE34 /* Frameworks */,
+				5397E05B1FE5650B00A9AE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCRefresherTest;
+			productName = DCRefresherTest;
+			productReference = 5397E05D1FE5650B00A9AE34 /* DCRefresherTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5397E06F1FE5650B00A9AE34 /* DCRefresherTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5397E0891FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTestTests" */;
+			buildPhases = (
+				5397E06C1FE5650B00A9AE34 /* Sources */,
+				5397E06D1FE5650B00A9AE34 /* Frameworks */,
+				5397E06E1FE5650B00A9AE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5397E0721FE5650B00A9AE34 /* PBXTargetDependency */,
+			);
+			name = DCRefresherTestTests;
+			productName = DCRefresherTestTests;
+			productReference = 5397E0701FE5650B00A9AE34 /* DCRefresherTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5397E07A1FE5650B00A9AE34 /* DCRefresherTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5397E08A1FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTestUITests" */;
+			buildPhases = (
+				5397E0771FE5650B00A9AE34 /* Sources */,
+				5397E0781FE5650B00A9AE34 /* Frameworks */,
+				5397E0791FE5650B00A9AE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5397E07D1FE5650B00A9AE34 /* PBXTargetDependency */,
+			);
+			name = DCRefresherTestUITests;
+			productName = DCRefresherTestUITests;
+			productReference = 5397E07B1FE5650B00A9AE34 /* DCRefresherTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		53CAFC7E1FE183100029F4A8 /* DCRefresher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53CAFC931FE183100029F4A8 /* Build configuration list for PBXNativeTarget "DCRefresher" */;
@@ -190,6 +356,20 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = dacheng;
 				TargetAttributes = {
+					5397E05C1FE5650B00A9AE34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					5397E06F1FE5650B00A9AE34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5397E05C1FE5650B00A9AE34;
+					};
+					5397E07A1FE5650B00A9AE34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5397E05C1FE5650B00A9AE34;
+					};
 					53CAFC7E1FE183100029F4A8 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -207,6 +387,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 53CAFC751FE183100029F4A8;
 			productRefGroup = 53CAFC801FE183100029F4A8 /* Products */;
@@ -215,16 +396,44 @@
 			targets = (
 				53CAFC7E1FE183100029F4A8 /* DCRefresher */,
 				53CAFC871FE183100029F4A8 /* DCRefresherTests */,
+				5397E05C1FE5650B00A9AE34 /* DCRefresherTest */,
+				5397E06F1FE5650B00A9AE34 /* DCRefresherTestTests */,
+				5397E07A1FE5650B00A9AE34 /* DCRefresherTestUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5397E05B1FE5650B00A9AE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5397E06A1FE5650B00A9AE34 /* LaunchScreen.storyboard in Resources */,
+				5397E0671FE5650B00A9AE34 /* Assets.xcassets in Resources */,
+				5397E0911FE5883300A9AE34 /* DCTestTableViewCell.xib in Resources */,
+				5397E0651FE5650B00A9AE34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E06E1FE5650B00A9AE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E0791FE5650B00A9AE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53CAFC7D1FE183100029F4A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				532FF84F1FE50A0700491661 /* image.xcassets in Resources */,
+				5397E0971FE5ADA300A9AE34 /* DCRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +447,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5397E0591FE5650B00A9AE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5397E0621FE5650B00A9AE34 /* ViewController.swift in Sources */,
+				5397E0901FE5883300A9AE34 /* DCTestTableViewCell.swift in Sources */,
+				5397E0601FE5650B00A9AE34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E06C1FE5650B00A9AE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5397E0751FE5650B00A9AE34 /* DCRefresherTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5397E0771FE5650B00A9AE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5397E0801FE5650B00A9AE34 /* DCRefresherTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53CAFC7A1FE183100029F4A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,12 +482,11 @@
 				534599FF1FE2F7840002453F /* DCKVOMenager.swift in Sources */,
 				534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */,
 				53CAFC9E1FE18F140029F4A8 /* DCRefresher.swift in Sources */,
-				532B886C1FE3C6CB005DD77D /* DCAnimateHeader.swift in Sources */,
+				532FF8511FE50F4400491661 /* DCDefualtHeader.swift in Sources */,
 				532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */,
 				534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */,
 				534599FD1FE2D1BB0002453F /* DCRefresherFooter.swift in Sources */,
 				534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */,
-				532B886E1FE3EBF8005DD77D /* DCAnimateFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +501,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5397E0721FE5650B00A9AE34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5397E05C1FE5650B00A9AE34 /* DCRefresherTest */;
+			targetProxy = 5397E0711FE5650B00A9AE34 /* PBXContainerItemProxy */;
+		};
+		5397E07D1FE5650B00A9AE34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5397E05C1FE5650B00A9AE34 /* DCRefresherTest */;
+			targetProxy = 5397E07C1FE5650B00A9AE34 /* PBXContainerItemProxy */;
+		};
 		53CAFC8B1FE183100029F4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53CAFC7E1FE183100029F4A8 /* DCRefresher */;
@@ -274,7 +518,122 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		5397E0631FE5650B00A9AE34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5397E0641FE5650B00A9AE34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5397E0681FE5650B00A9AE34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5397E0691FE5650B00A9AE34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5397E0821FE5650B00A9AE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5397E0831FE5650B00A9AE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5397E0841FE5650B00A9AE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCRefresherTest.app/DCRefresherTest";
+			};
+			name = Debug;
+		};
+		5397E0851FE5650B00A9AE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCRefresherTest.app/DCRefresherTest";
+			};
+			name = Release;
+		};
+		5397E0861FE5650B00A9AE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DCRefresherTest;
+			};
+			name = Debug;
+		};
+		5397E0871FE5650B00A9AE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KC9X59VQM;
+				INFOPLIST_FILE = DCRefresherTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fightsport.com.DCRefresherTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DCRefresherTest;
+			};
+			name = Release;
+		};
 		53CAFC911FE183100029F4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -466,6 +825,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5397E0881FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5397E0821FE5650B00A9AE34 /* Debug */,
+				5397E0831FE5650B00A9AE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5397E0891FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5397E0841FE5650B00A9AE34 /* Debug */,
+				5397E0851FE5650B00A9AE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5397E08A1FE5650B00A9AE34 /* Build configuration list for PBXNativeTarget "DCRefresherTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5397E0861FE5650B00A9AE34 /* Debug */,
+				5397E0871FE5650B00A9AE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		53CAFC791FE183100029F4A8 /* Build configuration list for PBXProject "DCRefresher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -7,7 +7,30 @@
 		<key>DCRefresher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>DCRefresherTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5397E05C1FE5650B00A9AE34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5397E06F1FE5650B00A9AE34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5397E07A1FE5650B00A9AE34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

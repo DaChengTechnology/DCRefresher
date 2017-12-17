@@ -12,22 +12,20 @@ public class DCRefresherHeader: DCRefresherComponent {
     
     var scrollViewOriginalInset:UIEdgeInsets?
 
-    /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         // Drawing code
     }
-    */
     
     public init(target:Any, selector:Selector)  {
-        super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
         prepare()
         self.setRefreshing(target: target, selector: selector)
     }
     
     public init(closure:@escaping DCRefreshCallBack) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
         prepare()
         self.setCallBackClosure {
             closure()
@@ -50,16 +48,17 @@ public class DCRefresherHeader: DCRefresherComponent {
     override func placeSubViews() {
         super.placeSubViews()
         var rect = frame
-        rect.origin.y = -frame.height + (scrollView?.contentOffset.y)!
+        rect.origin.y = (scrollView?.contentOffset.y)! - frame.height
+        self.frame = rect
     }
     
     ///确认安全边界(make sure safe edges)
     public override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        scrollViewOriginalInset = scrollView?.contentInset
+        scrollViewOriginalInset = scrollView?.scrollIndicatorInsets
         if (scrollViewOriginalInset?.top)! <= self.frame.height {
             scrollViewOriginalInset?.top = frame.height+40
-            scrollView?.contentInset = scrollViewOriginalInset!
+            scrollView?.scrollIndicatorInsets = scrollViewOriginalInset!
         }
     }
     

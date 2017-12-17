@@ -20,59 +20,26 @@ public class DCRefresherComponent :UIView{
     ///回调闭包(callback closure)
     private var callBack :DCRefreshCallBack? = nil
     
-    ///是否KVO(is it have KVO listener)
-    var isKVO:Bool = false
-    
     ///状态(control state)
     var state:DCRefresherState = .normal
     
     ///拖拽百分比(pulling percent)
-    var pullingPercent:CGFloat{
-        get{
-            return self.pullingPercent
-        }
-        set(v){
-            if v > CGFloat(1) {
-                self.pullingPercent = 1
-            }else{
-                self.pullingPercent = v
-            }
-            if isAutomaticallyChangeAlpha {
-                if state == .refreshing {
-                    return
-                }
-            }
-        }
-    }
+    var pullingPercent:CGFloat = 0
     
     ///自动透明度(auto change alpha)
-    var isAutomaticallyChangeAlpha:Bool {
-        get{
-            return self.isAutomaticallyChangeAlpha
-        }
-        set(v){
-            self.isAutomaticallyChangeAlpha = v
-            if state == .refreshing {
-                return
-            }
-            if v {
-                self.alpha = pullingPercent
-            }else{
-                self.alpha = 1
-            }
-        }
-    }
+    public var isAutomaticallyChangeAlpha:Bool = false
     
     ///是否滑到部分就开始刷新 位置通过postionRefresh设置(If you slide to part, you start to refresh your position through the postionRefresh setting)
     var isscrolledMidRefresh:Bool = false
     
-    ///滑动到指定位置刷新 范围0-1 如果为footer 值为0.2 scrollview滑动到(contentSize.height+contentOffset.y)/contentSize.height<=0.2的时候触发刷新操作(Slide to the specified location to refresh the range 0-1 if the footer value is 0.2 scrollview sliding to (contentSize. Height +contentOffset. Y)/contentSize. Height <= 0.2, trigger the refresh operation)
+    ///滑动到指定位置刷新 和边缘的距离
     var postionRefresh:CGFloat = 0
     
     
     //MARK: -初始化(initializer)
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        print("1")
         prepare()
     }
     
@@ -81,21 +48,14 @@ public class DCRefresherComponent :UIView{
         prepare()
     }
     
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        pullingPercent = 0
-        isAutomaticallyChangeAlpha = false
-    }
-    
     func prepare() {
-        autoresizingMask = .flexibleWidth
         backgroundColor = UIColor.clear
+        isscrolledMidRefresh = false
         pullingPercent = 0
-        isAutomaticallyChangeAlpha = false
     }
     
     public override func layoutSubviews() {
-        placeSubViews()
+        //placeSubViews()
         super.layoutSubviews()
     }
     
@@ -109,6 +69,7 @@ public class DCRefresherComponent :UIView{
                 s.kvo?.addObservers(scrollView: s)
                 scrollView = s
             }
+            placeSubViews()
         }
     }
     
@@ -131,7 +92,14 @@ public class DCRefresherComponent :UIView{
         self.state = state
     }
     
-    ///执行刷新
+    ///清空页面(clear view)
+    public func clear() {
+        for v in self.subviews {
+            v.removeFromSuperview()
+        }
+    }
+    
+    ///执行刷新(execute refresh)
     func executeRefreshingCallback() {
         if (refreshingTarget != nil) && (refreshingAction != nil) {
             performSelector(onMainThread: refreshingAction!, with: refreshingTarget, waitUntilDone: true)
@@ -140,5 +108,18 @@ public class DCRefresherComponent :UIView{
                 self.callBack!()
             }
         }
+    }
+    
+    ///应用透明度(apply alpha)
+    func applyAlpha() {
+        if alpha > 1.0 {
+            self.layer.opacity = Float(1)
+        }else{
+            self.layer.opacity = Float(alpha)
+        }
+    }
+    
+    public func setMidRefresh(refresh:Bool, distance:CGFloat){
+        
     }
 }

@@ -15,12 +15,13 @@ extension UIScrollView {
             return objc_getAssociatedObject(self, &headerkey) as? DCRefresherHeader
         }
         set(newValue) {
+            objc_setAssociatedObject(self, &headerkey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             if newValue == nil {
                 dc_header?.removeFromSuperview()
             }else{
-                self.addSubview(newValue!)
+                dc_header?.removeFromSuperview()
+                self.insertSubview(newValue!, at: 0)
             }
-            objc_setAssociatedObject(self, &headerkey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             if (self.dc_header == nil) && (self.dc_footer == nil) {
                 self.kvo = nil
             }
