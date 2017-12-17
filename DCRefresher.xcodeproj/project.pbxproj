@@ -10,6 +10,7 @@
 		532B88681FE3BDB6005DD77D /* DCNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */; };
 		532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88691FE3BE33005DD77D /* DCNormalFooter.swift */; };
 		532FF8511FE50F4400491661 /* DCDefualtHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FF8501FE50F4400491661 /* DCDefualtHeader.swift */; };
+		534009201FE6E50B006EED7E /* DCDefualtFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5340091F1FE6E50B006EED7E /* DCDefualtFooter.swift */; };
 		534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */; };
 		534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F71FE2B3500002453F /* DCRefresherComponent.swift */; };
 		534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FA1FE2D1870002453F /* DCRefresherHeader.swift */; };
@@ -61,6 +62,7 @@
 		532B88671FE3BDB6005DD77D /* DCNormalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalHeader.swift; sourceTree = "<group>"; };
 		532B88691FE3BE33005DD77D /* DCNormalFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalFooter.swift; sourceTree = "<group>"; };
 		532FF8501FE50F4400491661 /* DCDefualtHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDefualtHeader.swift; sourceTree = "<group>"; };
+		5340091F1FE6E50B006EED7E /* DCDefualtFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDefualtFooter.swift; sourceTree = "<group>"; };
 		534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherStaticValue.swift; sourceTree = "<group>"; };
 		534599F71FE2B3500002453F /* DCRefresherComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherComponent.swift; sourceTree = "<group>"; };
 		534599FA1FE2D1870002453F /* DCRefresherHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherHeader.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				53CAFC9D1FE18F140029F4A8 /* DCRefresher.swift */,
 				534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */,
 				532FF8501FE50F4400491661 /* DCDefualtHeader.swift */,
+				5340091F1FE6E50B006EED7E /* DCDefualtFooter.swift */,
 				534599F71FE2B3500002453F /* DCRefresherComponent.swift */,
 				5397E0961FE5ADA300A9AE34 /* DCRefresh.bundle */,
 			);
@@ -485,6 +488,7 @@
 				532FF8511FE50F4400491661 /* DCDefualtHeader.swift in Sources */,
 				532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */,
 				534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */,
+				534009201FE6E50B006EED7E /* DCDefualtFooter.swift in Sources */,
 				534599FD1FE2D1BB0002453F /* DCRefresherFooter.swift in Sources */,
 				534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */,
 			);

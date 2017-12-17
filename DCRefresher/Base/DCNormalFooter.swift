@@ -63,7 +63,6 @@ public class DCNormalFooter:DCRefresherFooter {
     func onRefreshing() {
         if (scrollView?.frame.height)! < (scrollView?.contentSize.height)! {
             if !isscrolledMidRefresh {
-                scrollView?.setContentOffset(CGPoint(x: 0, y: (scrollView?.contentSize.height)!-(scrollView?.frame.height)!), animated: false)
                 scrollView?.contentInset.bottom = frame.height
             }
         }

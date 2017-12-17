@@ -119,7 +119,9 @@ public class DCRefresherComponent :UIView{
         }
     }
     
+    ///设置中部刷新(setting mid refresh)
     public func setMidRefresh(refresh:Bool, distance:CGFloat){
-        
+        isscrolledMidRefresh = refresh
+        postionRefresh = distance
     }
 }
