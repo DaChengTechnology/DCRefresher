@@ -19,11 +19,11 @@ public class DCDefualtFooter:DCNormalFooter {
                 
             })
             let label = self.viewWithTag(2) as? UILabel
-            label?.text = "下拉刷新"
+            label?.text = "上拉刷新"
             return
         }
         self.clear()
-        let str = "下拉刷新" as NSString
+        let str = "上拉刷新" as NSString
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
         let rect = self.frame
         let imageView = UIImageView(frame: CGRect(x: (rect.width-s.width-35)/2, y: (rect.height-30)/2, width: 30, height: 30))

@@ -55,7 +55,7 @@ public class DCRefresherComponent :UIView{
     }
     
     public override func layoutSubviews() {
-        //placeSubViews()
+        placeSubViews()
         super.layoutSubviews()
     }
     
@@ -67,8 +67,8 @@ public class DCRefresherComponent :UIView{
             if s.kvo == nil {
                 s.kvo = DCKVOMenager()
                 s.kvo?.addObservers(scrollView: s)
-                scrollView = s
             }
+            scrollView = s
             placeSubViews()
         }
     }
@@ -118,7 +118,6 @@ public class DCRefresherComponent :UIView{
             self.layer.opacity = Float(alpha)
         }
     }
-    
     ///设置中部刷新(setting mid refresh)
     public func setMidRefresh(refresh:Bool, distance:CGFloat){
         isscrolledMidRefresh = refresh

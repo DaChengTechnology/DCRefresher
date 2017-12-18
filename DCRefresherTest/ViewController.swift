@@ -24,7 +24,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 self.tableView.dc_header?.setState(state: .refreshed)
             })
         })
-        tableView.dc_header?.isAutomaticallyChangeAlpha = true
+        tableView.dc_footer = DCDefualtFooter(closure: {
+            for _ in 1...20 {
+                self.arr.append("测试数据")
+            }
+            let offset = self.tableView.contentOffset
+            self.tableView.reloadData()
+            self.tableView.dc_footer?.setState(state: .refreshed)
+            //self.tableView.setContentOffset(offset, animated: false)
+        })
         generateData()
     }
     

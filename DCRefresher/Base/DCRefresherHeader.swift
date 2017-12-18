@@ -19,13 +19,13 @@ public class DCRefresherHeader: DCRefresherComponent {
     }
     
     public init(target:Any, selector:Selector)  {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
+        super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
         prepare()
         self.setRefreshing(target: target, selector: selector)
     }
     
     public init(closure:@escaping DCRefreshCallBack) {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
+        super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
         prepare()
         self.setCallBackClosure {
             closure()
@@ -48,7 +48,8 @@ public class DCRefresherHeader: DCRefresherComponent {
     override func placeSubViews() {
         super.placeSubViews()
         var rect = frame
-        rect.origin.y = (scrollView?.contentOffset.y)! - frame.height
+        rect.origin.y = -frame.height
+        rect.size = CGSize(width: (scrollView?.bounds.width)!, height: frame.height)
         self.frame = rect
     }
     

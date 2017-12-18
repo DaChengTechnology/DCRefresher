@@ -47,8 +47,8 @@ public class DCNormalFooter:DCRefresherFooter {
         if (scrollView?.frame.height)! > (scrollView?.contentSize.height)! {
             return
         }
-        if (scrollView?.contentOffset.y)! < ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!) {
-            scrollView?.setContentOffset(CGPoint(x: 0, y: (scrollView?.contentSize.height)!-(scrollView?.frame.height)!), animated: false)
+        if (scrollView?.contentOffset.y)! > ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!) {
+            scrollView?.setContentOffset(CGPoint(x: 0, y: (scrollView?.contentSize.height)!), animated: false)
         }
     }
     
@@ -74,20 +74,8 @@ public class DCNormalFooter:DCRefresherFooter {
         if scrollView?.contentInset.bottom != 0 {
             scrollView?.contentInset.bottom = 0
         }
-        if (scrollView?.isDragging)! {
-            return
-        }
-        if (scrollView?.frame.height)! > (scrollView?.contentSize.height)! {
-            return
-        }
-        if !isscrolledMidRefresh {
-            if ((scrollView?.contentOffset.y)! < ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!-self.frame.height)) && ((scrollView?.contentOffset.y)! > ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!)) {
-                scrollView?.setContentOffset(CGPoint(x: 0, y: (scrollView?.contentSize.height)!-(scrollView?.frame.height)!+self.frame.height), animated: false)
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
-                self.scrollView?.setContentOffset(CGPoint(x: 0, y: (self.scrollView?.contentSize.height)!-(self.scrollView?.frame.height)!), animated: true)
-                self.setState(state: .normal)
-            })
+        DispatchQueue.main.async {
+            self.setState(state: .normal)
         }
     }
     
@@ -102,13 +90,6 @@ public class DCNormalFooter:DCRefresherFooter {
         if (scrollView?.frame.height)! > (scrollView?.contentSize.height)! {
             return
         }
-        if !isscrolledMidRefresh {
-            if ((scrollView?.contentOffset.y)! < ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!-self.frame.height)) && ((scrollView?.contentOffset.y)! > ((scrollView?.contentSize.height)!-(scrollView?.frame.height)!)) {
-                scrollView?.setContentOffset(CGPoint(x: 0, y: (scrollView?.contentSize.height)!-(scrollView?.frame.height)!+self.frame.height), animated: false)
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
-                self.scrollView?.setContentOffset(CGPoint(x: 0, y: (self.scrollView?.contentSize.height)!-(self.scrollView?.frame.height)!), animated: true)
-            })
-        }
+        
     }
 }

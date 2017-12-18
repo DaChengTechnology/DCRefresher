@@ -127,23 +127,23 @@ public class DCKVOMenager: NSObject {
             if scrollView?.dc_footer != nil {
                 if !(scrollView?.dc_footer?.isscrolledMidRefresh)! {
                     if scrollView?.dc_footer?.state == .normal {
-                        if ((scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!)  {
+                        if ((scrollView?.contentOffset.y)! >= (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!)  {
                             scrollView?.dc_footer?.setState(state: .willRefresh)
                         }
                     }
                     if scrollView?.dc_footer?.state == .willRefresh {
-                        if ((scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!) {
+                        if ((scrollView?.contentOffset.y)! < (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.frame.height)!) {
                             scrollView?.dc_footer?.setState(state: .normal)
                         }
                     }
                 }else{
                     if scrollView?.dc_footer?.state == .normal {
-                        if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
+                        if (scrollView?.contentOffset.y)! >= (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
                             scrollView?.dc_footer?.setState(state: .willRefresh)
                         }
                     }
                     if scrollView?.dc_footer?.state == .willRefresh {
-                        if (scrollView?.contentOffset.y)! > (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
+                        if (scrollView?.contentOffset.y)! < (scrollView?.contentSize.height)! - (scrollView?.frame.height)! + (scrollView?.dc_footer?.postionRefresh)! {
                             scrollView?.dc_footer?.setState(state: .normal)
                         }
                     }
@@ -155,7 +155,7 @@ public class DCKVOMenager: NSObject {
     func scrollViewContentSizeDidChange(change: [NSKeyValueChangeKey : Any]?){
         if scrollView?.dc_footer != nil {
             var rect = scrollView?.dc_footer?.frame
-            rect?.origin.y = (scrollView?.contentSize.height)! - (scrollView?.frame.height)!
+            rect?.origin.y = (scrollView?.contentSize.height)!
             scrollView?.dc_footer?.frame = rect!
         }
     }
