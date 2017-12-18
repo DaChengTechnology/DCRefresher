@@ -1,10 +1,13 @@
 # DCRefresher
+UIScrollview Header and Footer refresher for UITableView on swift  
+DCRefresher is used in UIUITableView to refresh and pull more functional modules  
 ## installation   
+### Requirements
+ios 11  
+swift 4.0
 ### Cocospod  
             pod 'DCRefresher'
 ## use
-UIScrollview Header and Footer refresher for UITableView on swift  
-DCRefresher is used in UIUITableView to refresh and pull more functional modules  
 if you want to add a header for UITableView, you can do it  
 ```
 tableView.dc_header = DCDefualtHeader(closure: {
