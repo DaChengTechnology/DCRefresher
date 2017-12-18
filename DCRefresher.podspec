@@ -95,6 +95,7 @@ Pod::Spec.new do |s|
   #s.exclude_files = "Classes/Exclude"
 
   s.public_header_files = "DCRefresher/*.h"
+  .swift-version = “4.0.3”
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
