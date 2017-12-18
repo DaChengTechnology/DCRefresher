@@ -8,10 +8,15 @@
 
 import Foundation
 public enum DCRefresherState {
+    ///普通状态(nomal state)
     case normal
+    ///将要刷新(will refresh state)
     case willRefresh
+    ///正在刷新(refreshing state)
     case refreshing
+    ///刷新完成(refreshed state)
     case refreshed
+    ///没有更多(no more state)
     case noMore
 }
 
