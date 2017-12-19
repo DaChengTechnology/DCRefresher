@@ -38,11 +38,11 @@ public enum DCRefresherState {
 ```
 ## DIY
 If you need DIY header or footer,you can create a class inherit 'DCNormalHeader' or 'DCNormalFooter'. and override the 'onNormal','onWillRefresh','onRefreshing','onRefreshed','onNoMore' function.  
-Note: remember run the super functiion
+### Note: 
+remember run the super functiion
 ### Method
 clear()-clear all subviews
 ### Attribute
 ```
 var oldState:DCRefresherState?//last state
 ```
-chinese document update at tomorrow
