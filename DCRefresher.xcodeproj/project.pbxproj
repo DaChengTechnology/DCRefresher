@@ -11,6 +11,7 @@
 		532B886A1FE3BE33005DD77D /* DCNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B88691FE3BE33005DD77D /* DCNormalFooter.swift */; };
 		532FF8511FE50F4400491661 /* DCDefualtHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FF8501FE50F4400491661 /* DCDefualtHeader.swift */; };
 		534009201FE6E50B006EED7E /* DCDefualtFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5340091F1FE6E50B006EED7E /* DCDefualtFooter.swift */; };
+		5342D36D1FE94E4A00796625 /* README-CN.md in Resources */ = {isa = PBXBuildFile; fileRef = 5342D36C1FE94E4A00796625 /* README-CN.md */; };
 		534599F61FE28CB60002453F /* DCRefresherStaticValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */; };
 		534599F81FE2B3500002453F /* DCRefresherComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599F71FE2B3500002453F /* DCRefresherComponent.swift */; };
 		534599FB1FE2D1870002453F /* DCRefresherHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534599FA1FE2D1870002453F /* DCRefresherHeader.swift */; };
@@ -65,6 +66,7 @@
 		532B88691FE3BE33005DD77D /* DCNormalFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCNormalFooter.swift; sourceTree = "<group>"; };
 		532FF8501FE50F4400491661 /* DCDefualtHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDefualtHeader.swift; sourceTree = "<group>"; };
 		5340091F1FE6E50B006EED7E /* DCDefualtFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCDefualtFooter.swift; sourceTree = "<group>"; };
+		5342D36C1FE94E4A00796625 /* README-CN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-CN.md"; sourceTree = "<group>"; };
 		534599F51FE28CB60002453F /* DCRefresherStaticValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherStaticValue.swift; sourceTree = "<group>"; };
 		534599F71FE2B3500002453F /* DCRefresherComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherComponent.swift; sourceTree = "<group>"; };
 		534599FA1FE2D1870002453F /* DCRefresherHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRefresherHeader.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		53CAFC751FE183100029F4A8 = {
 			isa = PBXGroup;
 			children = (
+				5342D36C1FE94E4A00796625 /* README-CN.md */,
 				5392F3561FE8085B000F30B8 /* DCRefresher.podspec */,
 				5392F3571FE8085C000F30B8 /* README.md */,
 				53CAFC811FE183100029F4A8 /* DCRefresher */,
@@ -445,6 +448,7 @@
 				5392F3591FE8085C000F30B8 /* README.md in Resources */,
 				5392F3581FE8085C000F30B8 /* DCRefresher.podspec in Resources */,
 				5397E0971FE5ADA300A9AE34 /* DCRefresh.bundle in Resources */,
+				5342D36D1FE94E4A00796625 /* README-CN.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
