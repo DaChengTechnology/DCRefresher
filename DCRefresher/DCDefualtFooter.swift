@@ -27,7 +27,7 @@ public class DCDefualtFooter:DCNormalFooter {
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
         let rect = self.frame
         let imageView = UIImageView(frame: CGRect(x: (rect.width-s.width-35)/2, y: (rect.height-30)/2, width: 30, height: 30))
-        let path = Bundle.init(path: (Bundle.init(identifier: "fightsport.com.DCRefresher")?.path(forResource: "DCRefresh", ofType: "bundle"))!)?.path(forResource: "down", ofType: "png")
+        let path = Bundle.init(path: Bundle.init(for: DCRefresherComponent.classForCoder()).path(forResource: "DCRefresh", ofType: "bundle")!)?.path(forResource: "down", ofType: "png")
         let image = UIImage(contentsOfFile: path!)
         imageView.image = image
         imageView.tag = 1
@@ -61,7 +61,7 @@ public class DCDefualtFooter:DCNormalFooter {
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
         let rect = self.frame
         let imageView = UIImageView(frame: CGRect(x: (rect.width-s.width-35)/2, y: (rect.height-30)/2, width: 30, height: 30))
-        let path = Bundle.init(path: (Bundle.init(identifier: "fightsport.com.DCRefresher")?.path(forResource: "DCRefresh", ofType: "bundle"))!)?.path(forResource: "down", ofType: "png")
+        let path = Bundle.init(path: Bundle.init(for: DCRefresherComponent.classForCoder()).path(forResource: "DCRefresh", ofType: "bundle")!)?.path(forResource: "down", ofType: "png")
         let image = UIImage(contentsOfFile: path!)
         imageView.image = image
         imageView.tag = 1
@@ -96,7 +96,7 @@ public class DCDefualtFooter:DCNormalFooter {
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
         let rect = self.frame
         let imageView = UIImageView(frame: CGRect(x: (rect.width-s.width-35)/2, y: (rect.height-30)/2, width: 30, height: 30))
-        let path = Bundle.init(path: (Bundle.init(identifier: "fightsport.com.DCRefresher")?.path(forResource: "DCRefresh", ofType: "bundle"))!)?.path(forResource: "complete", ofType: "png")
+        let path = Bundle.init(path: Bundle.init(for: DCRefresherComponent.classForCoder()).path(forResource: "DCRefresh", ofType: "bundle")!)?.path(forResource: "complete", ofType: "png")
         let image = UIImage(contentsOfFile: path!)
         imageView.image = image
         imageView.tag = 1

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DCRefresher"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "UIScrollview上拉下拉刷新器(UIScrollview Header and Footer refresher) use in UITableView by swift"
 
   # This description is used to generate tags and improve search results.
