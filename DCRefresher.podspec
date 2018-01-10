@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "DCRefresher", "DCRefresher/*","DCRefresher/Base/*"
-  #s.exclude_files = "Classes/Exclude"
+  #s.exclude_files = "DCRefresher/DCRefresher.bundle"
 
   s.public_header_files = "DCRefresher/*.h"
 
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # s.resource  = "icon.png"
+   s.resource  = "DCRefresher/DCRefresher.bundle"
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
