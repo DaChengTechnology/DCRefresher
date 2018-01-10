@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DCRefresher"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "UIScrollview上拉下拉刷新器(UIScrollview Header and Footer refresher) use in UITableView by swift"
 
   # This description is used to generate tags and improve search results.
@@ -105,8 +105,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-   s.resource  = "DCRefresher/DCRefresher.bundle"
-  # s.resources = "Resources/*.png"
+#s.resource  = "DCRefresher/DCRefresher.bundle"
+   s.resources = "DCRefresher/DCRefresh.bundle"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
