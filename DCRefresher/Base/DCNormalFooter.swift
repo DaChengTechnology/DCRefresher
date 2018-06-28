@@ -11,7 +11,7 @@ import Foundation
 open class DCNormalFooter:DCRefresherFooter {
     
     ///上一个状态(last state)
-    var oldState:DCRefresherState?
+    open var oldState:DCRefresherState?
     
     open override func didMoveToSuperview() {
         onNormal()
@@ -37,7 +37,7 @@ open class DCNormalFooter:DCRefresherFooter {
     }
     
     ///普通布局(normal layout)
-    func onNormal() {
+    open func onNormal() {
         if scrollView?.contentInset.bottom != 0 {
             scrollView?.contentInset.bottom = 0
         }
@@ -53,14 +53,14 @@ open class DCNormalFooter:DCRefresherFooter {
     }
     
     ///即将刷新(will refresh layout)
-    func onWillRefresh() {
+    open func onWillRefresh() {
         if scrollView?.contentInset.bottom != 0 {
             scrollView?.contentInset.bottom = 0
         }
     }
     
     ///正在刷新(refreshing layout)
-    func onRefreshing() {
+    open func onRefreshing() {
         if (scrollView?.frame.height)! < (scrollView?.contentSize.height)! {
             if !isscrolledMidRefresh {
                 scrollView?.contentInset.bottom = frame.height
@@ -70,7 +70,7 @@ open class DCNormalFooter:DCRefresherFooter {
     }
     
     ///刷新完成(refreshed layout)
-    func onRefreshed() {
+    open func onRefreshed() {
         if scrollView?.contentInset.bottom != 0 {
             scrollView?.contentInset.bottom = 0
         }
@@ -80,7 +80,7 @@ open class DCNormalFooter:DCRefresherFooter {
     }
     
     ///没有更多(nomore layout)
-    func onNoMore() {
+    open func onNoMore() {
         if scrollView?.contentInset.bottom != 0 {
             scrollView?.contentInset.bottom = 0
         }

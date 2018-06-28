@@ -11,7 +11,7 @@ import Foundation
 open class DCNormalHeader:DCRefresherHeader {
     
     ///上一个状态(last state)
-    var oldState:DCRefresherState?
+    open var oldState:DCRefresherState?
     
     open override func didMoveToSuperview() {
         onNormal()
@@ -37,7 +37,7 @@ open class DCNormalHeader:DCRefresherHeader {
     }
     
     ///普通布局(normal layout)
-    func onNormal() {
+    open func onNormal() {
         if scrollView?.contentInset.top != 0 {
             scrollView?.contentInset.top = 0
         }
@@ -50,14 +50,14 @@ open class DCNormalHeader:DCRefresherHeader {
     }
     
     ///即将刷新(will refresh layout)
-    func onWillRefresh() {
+    open func onWillRefresh() {
         if scrollView?.contentInset.top != 0 {
             scrollView?.contentInset.top = 0
         }
     }
     
     ///正在刷新(refreshing layout)
-    func onRefreshing() {
+    open func onRefreshing() {
         if !self.isscrolledMidRefresh {
             var inset = scrollView?.contentInset
             inset?.top = self.frame.height
@@ -67,7 +67,7 @@ open class DCNormalHeader:DCRefresherHeader {
     }
     
     ///刷新完成(refreshed layout)
-    func onRefreshed() {
+    open func onRefreshed() {
         if scrollView?.contentInset.top != 0 {
             scrollView?.contentInset.top = 0
         }
@@ -89,7 +89,7 @@ open class DCNormalHeader:DCRefresherHeader {
     }
     
     ///没有更多(nomore layout)
-    func onNoMore() {
+    open func onNoMore() {
         if scrollView?.contentInset.top != 0 {
             scrollView?.contentInset.top = 0
         }

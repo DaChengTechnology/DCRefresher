@@ -10,7 +10,7 @@ import Foundation
 
 public class DCDefualtHeader:DCNormalHeader{
     
-    override func onNormal() {
+    override public func onNormal() {
         super.onNormal()
         if oldState == .willRefresh {
             let v = self.viewWithTag(1)
@@ -40,7 +40,7 @@ public class DCDefualtHeader:DCNormalHeader{
         self.addSubview(label)
     }
     
-    override func onWillRefresh() {
+    override public func onWillRefresh() {
         if oldState == .normal {
             let v = self.viewWithTag(1)
             UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
@@ -75,7 +75,7 @@ public class DCDefualtHeader:DCNormalHeader{
         super.onWillRefresh()
     }
     
-    override func onRefreshing() {
+    override public func onRefreshing() {
         self.clear()
         let str = "正在刷新中..." as NSString
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
@@ -91,7 +91,7 @@ public class DCDefualtHeader:DCNormalHeader{
         super.onRefreshing()
     }
     
-    override func onRefreshed() {
+    override public func onRefreshed() {
         self.clear()
         let str = "刷新完成" as NSString
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
@@ -110,7 +110,7 @@ public class DCDefualtHeader:DCNormalHeader{
         super.onRefreshed()
     }
     
-    override func onNoMore() {
+    override public func onNoMore() {
         self.clear()
         let str = "没有更多了" as NSString
         let s = str.size(withAttributes: [.font:UIFont.systemFont(ofSize: 17)])
