@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class DCRefresherComponent :UIView{
+open class DCRefresherComponent :UIView{
     
     ///父控件(father control)
     weak var scrollView:UIScrollView?
@@ -54,14 +54,14 @@ public class DCRefresherComponent :UIView{
         pullingPercent = 0
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         placeSubViews()
         super.layoutSubviews()
     }
     
     func placeSubViews() {}
     
-    public override func willMove(toSuperview newSuperview: UIView?) {
+    open override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if let s = newSuperview as? UIScrollView {
             if s.kvo == nil {
@@ -77,23 +77,23 @@ public class DCRefresherComponent :UIView{
     
     //MARK:公用方法(public fuction)
     ///设置刷新的回调方法(Set Refresh callback function)
-    public func setRefreshing( target:Any, selector:Selector) {
+    open func setRefreshing( target:Any, selector:Selector) {
         refreshingTarget = target
         refreshingAction = selector
     }
     
     ///设置回调闭包(set callback closure)
-    public func setCallBackClosure(closure:@escaping DCRefreshCallBack) {
+    open func setCallBackClosure(closure:@escaping DCRefreshCallBack) {
         self.callBack = closure
     }
     
     ///设置状态(set state)
-    public func setState(state:DCRefresherState) {
+    open func setState(state:DCRefresherState) {
         self.state = state
     }
     
     ///清空页面(clear view)
-    public func clear() {
+    open func clear() {
         for v in self.subviews {
             v.removeFromSuperview()
         }
@@ -119,7 +119,7 @@ public class DCRefresherComponent :UIView{
         }
     }
     ///设置中部刷新(setting mid refresh)
-    public func setMidRefresh(refresh:Bool, distance:CGFloat){
+    open func setMidRefresh(refresh:Bool, distance:CGFloat){
         isscrolledMidRefresh = refresh
         postionRefresh = distance
     }

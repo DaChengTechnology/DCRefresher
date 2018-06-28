@@ -8,18 +8,18 @@
 
 import Foundation
 
-public class DCNormalFooter:DCRefresherFooter {
+open class DCNormalFooter:DCRefresherFooter {
     
     ///上一个状态(last state)
     var oldState:DCRefresherState?
     
-    public override func didMoveToSuperview() {
+    open override func didMoveToSuperview() {
         onNormal()
         oldState = .normal
     }
     
     //MARK: 重写父类方法(overide super fuction)
-    public override func setState(state: DCRefresherState) {
+    open override func setState(state: DCRefresherState) {
         oldState = state
         super.setState(state: state)
         switch state {

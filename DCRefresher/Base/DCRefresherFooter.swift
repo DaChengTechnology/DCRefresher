@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DCRefresherFooter: DCRefresherComponent {
+open class DCRefresherFooter: DCRefresherComponent {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -56,7 +56,7 @@ public class DCRefresherFooter: DCRefresherComponent {
     }
     
     ///确认安全边界(make sure safe edges)
-    public override func willMove(toSuperview newSuperview: UIView?) {
+    open override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         scrollViewOriginalInset = scrollView?.scrollIndicatorInsets
         if (scrollViewOriginalInset?.bottom)! <= self.frame.height {

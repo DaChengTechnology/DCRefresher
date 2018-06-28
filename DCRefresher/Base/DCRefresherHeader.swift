@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class DCRefresherHeader: DCRefresherComponent {
+open class DCRefresherHeader: DCRefresherComponent {
     
     var scrollViewOriginalInset:UIEdgeInsets?
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         // Drawing code
     }
     
@@ -54,7 +54,7 @@ public class DCRefresherHeader: DCRefresherComponent {
     }
     
     ///确认安全边界(make sure safe edges)
-    public override func willMove(toSuperview newSuperview: UIView?) {
+    open override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         scrollViewOriginalInset = scrollView?.scrollIndicatorInsets
         if (scrollViewOriginalInset?.top)! <= self.frame.height {
