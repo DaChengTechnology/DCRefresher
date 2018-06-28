@@ -96,7 +96,6 @@ public class DCKVOMenager: NSObject {
                 }
             }
         }
-        print(scrollView?.contentOffset.y)
         //滑动状态操作(dragging state)
         if (scrollView?.isDragging)! {
             if scrollView?.dc_header != nil {
